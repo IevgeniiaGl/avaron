@@ -337,7 +337,7 @@ footer .brand {
 }
 footer small {
   justify-self: end;
-  font-size: .64rem;
+  font-size: .72rem;
   letter-spacing: .08em;
   line-height: 1.7;
   text-align: right;
@@ -522,7 +522,7 @@ footer small {
     height: 32px
   }
   footer small {
-    font-size: .56rem;
+    font-size: .64rem;
     letter-spacing: .04em;
     justify-self: center;
     white-space: normal;
