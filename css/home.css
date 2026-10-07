@@ -12,7 +12,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translateX(30px);
-  transition: opacity .65s ease,transform .65s ease,visibility .65s;
+  transition: opacity .3s ease,transform .3s ease,visibility .3s;
   pointer-events: none
 }
 .hero-slide.active {

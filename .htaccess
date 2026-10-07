@@ -1,4 +1,11 @@
+Options +Includes
+AddOutputFilter INCLUDES .html
+
 RewriteEngine On
+
+# Block direct access to server-side include files; SSI subrequests are still allowed.
+RewriteCond %{IS_SUBREQ} false
+RewriteRule ^includes(\.example)?/ - [F,L]
 
 # Keep both language homepages on clean directory URLs.
 RewriteCond %{THE_REQUEST} \s/+index(?:\.html)?(?:[/?\s]) [NC]
