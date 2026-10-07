@@ -1,0 +1,363 @@
+.disease-source {
+  padding: 100px 30px 120px
+}
+.disease-lead {
+  margin-bottom: 100px
+}
+.disease-lead__media {
+  width: 100%;
+  height: 480px;
+  object-fit: contain;
+  border-radius: 80px 0;
+  background: linear-gradient(145deg,#d8e0e3,#91a8b2)
+}
+.disease-block {
+  padding: 70px 0
+}
+.disease-block__copy {
+  max-width: 900px
+}
+.disease-card__title {
+  color: var(--deep);
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+.disease-card__copy {
+  margin: 0;
+  font-size: .86rem
+}
+@media(max-width:760px) {
+  .disease-source {
+    padding: 65px 22px 80px
+  }
+  .disease-lead {
+    grid-template-columns: 1fr;
+    margin-bottom: 65px
+  }
+  .disease-lead__media {
+    grid-row: 1;
+    height: 340px;
+    border-radius: 55px 0
+  }
+  .disease-block {
+    padding: 50px 0
+  }
+  .disease-cards {
+    grid-template-columns: 1fr
+  }
+}
+.disease-media {
+  margin-top: 32px
+}
+.disease-media.single .treatment-media__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain
+}
+.treatment-media {
+  margin-left: 0
+}
+.treatment-media {
+  width: 100%;
+  max-width: none;
+  margin: 0
+}
+.treatment-media__image {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: 0 70px 0 70px
+}
+.treatment-media {
+  order: -1
+}
+@media(max-width:760px) {
+  .treatment-block {
+    grid-template-columns: 1fr;
+    gap: 30px
+  }
+  .treatment-media {
+    grid-row: 1
+  }
+  .treatment-media__image {
+    max-height: 340px;
+    border-radius: 0 45px
+  }
+}
+.disease-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 35px;
+  counter-reset: type
+}
+.disease-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  column-gap: 25px;
+  padding: 30px 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid #c8d1d3;
+  counter-increment: type
+}
+.disease-card:last-child {
+  border-bottom: 1px solid #c8d1d3
+}
+.disease-card:before {
+  content: counter(type,upper-roman);
+  grid-row: 1/3;
+  align-self: center;
+  font-family: Prata,Georgia,serif;
+  font-size: 2.7rem;
+  color: #8399a1
+}
+.disease-card__title {
+  grid-column: 2;
+  margin: 0 0 5px
+}
+.disease-card__copy {
+  grid-column: 2
+}
+.stage-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 0;
+  margin: 45px 0 0;
+  padding: 35px 0 0;
+  list-style: none;
+  counter-reset: stage
+}
+.stage-list li {
+  position: relative;
+  min-height: 150px;
+  padding: 65px 28px 28px;
+  background: transparent;
+  border: 0;
+  counter-increment: stage
+}
+.stage-list li:before {
+  content: counter(stage,upper-roman);
+  position: absolute;
+  top: -8px;
+  left: 24px;
+  width: auto;
+  height: auto;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-family: Prata,serif;
+  font-size: 2.5rem;
+  color: #718990
+}
+@media(max-width:760px) {
+  .disease-card {
+    grid-template-columns: 64px 1fr
+  }
+  .disease-card:before {
+    font-size: 2rem
+  }
+  .stage-list {
+    grid-template-columns: 1fr;
+    padding: 0
+  }
+  .stage-list li {
+    min-height: auto;
+    padding: 68px 0 28px;
+    border: 0
+  }
+  .stage-list li:before {
+    top: 4px;
+    left: 0;
+    width: auto;
+    height: auto;
+    font-size: 2.2rem
+  }
+}
+.types-image {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 70px 0
+}
+.types-content {
+  min-width: 0
+}
+.disease-cards--plain {
+  margin-top: 25px
+}
+.disease-cards--plain .disease-card {
+  display: block;
+  padding: 24px 0
+}
+.disease-cards--plain .disease-card:before {
+  display: none
+}
+.disease-cards--plain .disease-card__title,.disease-cards--plain .disease-card__copy {
+  grid-column: auto
+}
+@media(max-width:760px) {
+  .types-block {
+    grid-template-columns: 1fr;
+    gap: 35px
+  }
+  .types-image {
+    max-height: 380px;
+    border-radius: 45px 0
+  }
+}
+.benefits-source {
+  padding: 100px 30px 120px
+}
+.benefits-lead__media {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 0 70px;
+  background: transparent
+}
+.benefits-lead__copy {
+  max-width: 650px
+}
+.benefit-principles {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin: 100px 0
+}
+.benefit-principle {
+  padding: 30px 35px;
+  border: 0;
+  text-align: center
+}
+.benefit-principle__title {
+  margin: 0 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .1em
+}
+.benefit-principle__copy {
+  max-width: 260px;
+  margin: 0 auto;
+  color: #6f7f85;
+  font-size: .88rem;
+  line-height: 1.65
+}
+.benefits-action {
+  padding: 80px 0
+}
+.benefits-action__media {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 70px 0
+}
+.composition {
+  padding: 80px 0 0
+}
+.composition__title {
+  max-width: 800px
+}
+@media(max-width:760px) {
+  .benefits-source {
+    padding: 65px 22px 80px
+  }
+  .benefits-lead,.benefits-action {
+    grid-template-columns: 1fr;
+    gap: 35px
+  }
+  .benefits-lead__media {
+    grid-row: 1;
+    max-height: 360px;
+    border-radius: 0 45px
+  }
+  .benefit-principles {
+    grid-template-columns: 1fr;
+    margin: 60px 0
+  }
+  .benefit-principle {
+    border-left: 0;
+    border-top: 1px solid #cbd4d6;
+    padding: 24px 0
+  }
+  .benefits-action {
+    padding: 50px 0
+  }
+  .benefits-action__media {
+    max-height: 380px;
+    border-radius: 45px 0
+  }
+  .composition {
+    padding-top: 50px
+  }
+}
+.benefit-icon {
+  width: 80px;
+  height: 80px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 22px;
+  border: 0;
+  border-radius: 50%;
+  background: #eef2f3;
+  font-family: Georgia,serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: #fff
+}
+.benefits-lead__media {
+  filter: drop-shadow(0 22px 24px rgba(25,71,91,.18))
+}
+.active-grid {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 24px;
+  margin: 50px 0 65px
+}
+.active-card {
+  text-align: center
+}
+.active-card__media {
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 12px 25px rgba(25,71,91,.13)
+}
+.active-card__title {
+  margin: 0 auto;
+  max-width: 180px;
+  line-height: 1.45;
+  letter-spacing: .04em;
+  text-transform: none
+}
+.benefit-icon__image {
+  width: 37px;
+  height: 37px;
+  object-fit: contain;
+  filter: none
+}
+@media(max-width:760px) {
+  .products .product-visual {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 1/1
+  }
+  .product-visual__media {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain
+  }
+  .product-visual.cream .product-visual__media {
+    height: 85%;
+    width: auto
+  }
+}

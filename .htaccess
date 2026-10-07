@@ -1,0 +1,36 @@
+RewriteEngine On
+
+# Keep both language homepages on clean directory URLs.
+RewriteCond %{THE_REQUEST} \s/+index(?:\.html)?(?:[/?\s]) [NC]
+RewriteRule ^index(?:\.html)?/?$ /ro/ [R=301,L,NC]
+
+RewriteCond %{THE_REQUEST} \s/+ro/index(?:\.html)?(?:[/?\s]) [NC]
+RewriteRule ^ro/index(?:\.html)?/?$ /ro/ [R=301,L,NC]
+
+RewriteCond %{THE_REQUEST} \s/+ru/index(?:\.html)?(?:[/?\s]) [NC]
+RewriteRule ^ru/index(?:\.html)?/?$ /ru/ [R=301,L,NC]
+
+# The bare domain always opens the Romanian version.
+RewriteRule ^$ /ro/ [R=301,L]
+
+# Redirect legacy page names with underscores to canonical hyphenated URLs.
+RewriteRule ^avaron_krem\.html$ /ru/avaron-krem.html [R=301,L,NE]
+RewriteRule ^avaron_suppozitorii\.html$ /ru/avaron-suppozitorii.html [R=301,L,NE]
+RewriteRule ^gde_kupit\.html$ /ru/gde-kupit.html [R=301,L,NE]
+RewriteRule ^instruktsiya_avaron_krem\.html$ /ru/instruktsiya-avaron-krem.html [R=301,L,NE]
+RewriteRule ^instruktsiya_avaron_suppozitorii\.html$ /ru/instruktsiya-avaron-suppozitorii.html [R=301,L,NE]
+RewriteRule ^o_zabolevanii\.html$ /ru/o-zabolevanii.html [R=301,L,NE]
+
+RewriteRule ^ru/avaron_krem\.html$ /ru/avaron-krem.html [R=301,L,NE]
+RewriteRule ^ru/avaron_suppozitorii\.html$ /ru/avaron-suppozitorii.html [R=301,L,NE]
+RewriteRule ^ru/gde_kupit\.html$ /ru/gde-kupit.html [R=301,L,NE]
+RewriteRule ^ru/instruktsiya_avaron_krem\.html$ /ru/instruktsiya-avaron-krem.html [R=301,L,NE]
+RewriteRule ^ru/instruktsiya_avaron_suppozitorii\.html$ /ru/instruktsiya-avaron-suppozitorii.html [R=301,L,NE]
+RewriteRule ^ru/o_zabolevanii\.html$ /ru/o-zabolevanii.html [R=301,L,NE]
+
+RewriteRule ^ro/avaron_crema\.html$ /ro/avaron-crema.html [R=301,L,NE]
+RewriteRule ^ro/avaron_supozitoare\.html$ /ro/avaron-supozitoare.html [R=301,L,NE]
+RewriteRule ^ro/boala_hemoroidala\.html$ /ro/boala-hemoroidala.html [R=301,L,NE]
+RewriteRule ^ro/prospect_avaron_crema\.html$ /ro/prospect-avaron-crema.html [R=301,L,NE]
+RewriteRule ^ro/prospect_avaron_supozitoare\.html$ /ro/prospect-avaron-supozitoare.html [R=301,L,NE]
+RewriteRule ^ro/unde_cumpar\.html$ /ro/unde-cumpar.html [R=301,L,NE]

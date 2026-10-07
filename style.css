@@ -1,0 +1,19 @@
+@import url("css/base.css?v=20260721-14");
+@import url("css/navigation.css?v=20260721-14");
+@import url("css/home.css?v=20260721-14");
+@import url("css/products.css?v=20260721-14");
+@import url("css/pages.css?v=20260721-14");
+@import url("css/disease-benefits.css?v=20260721-14");
+@import url("css/enhancements.css?v=20260721-14");
+
+:root {
+  --ink: #173f50;
+  --deep: #194b60;
+  --deep2: #123746;
+  --paper: #f9f7f4;
+  --text: #343d41;
+  --max: 1180px
+}
+* {
+  box-sizing: border-box
+}

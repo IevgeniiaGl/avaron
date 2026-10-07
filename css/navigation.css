@@ -1,0 +1,33 @@
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .6rem;
+  letter-spacing: .12em
+}
+.lang-switch strong {
+  color: #fff
+}
+.lang-switch i {
+  width: 1px;
+  height: 13px;
+  background: rgba(255,255,255,.45)
+}
+.lang-switch a {
+  font-size: .6rem;
+  opacity: .62
+}
+.lang-switch a:hover {
+  opacity: 1
+}
+.lang-switch a:after {
+  display: none
+}
+@media(max-width:760px) {
+  .lang-switch {
+    margin-top: 10px
+  }
+  .lang-switch a {
+    font-size: .7rem
+  }
+}
