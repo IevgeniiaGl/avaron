@@ -130,10 +130,6 @@ h3 {
   min-height: 760px;
   height: 100vh;
   max-height: 980px;
-  padding: 150px max(5vw,calc((100vw - var(--max))/2));
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  align-items: center;
   overflow: hidden;
   position: relative;
   color: #fff;
@@ -216,7 +212,6 @@ h3 {
   transition: color .25s,background-color .25s,border-color .25s,transform .25s
 }
 .btn:hover {
-  color: #fff;
   background: var(--deep2);
   border-color: var(--deep2);
   transform: translateY(-2px)
@@ -226,7 +221,6 @@ h3 {
   outline-offset: 3px
 }
 .btn-light {
-  color: #fff;
   background: transparent;
   border-color: rgba(255,255,255,.65)
 }
@@ -278,9 +272,6 @@ h3 {
   margin: 0 auto 22px;
   width: 74px;
   height: 74px;
-  font-family: Georgia,serif;
-  font-size: 3rem;
-  font-weight: 300;
   border: 1px solid rgba(255,255,255,.35);
   border-radius: 50%
 }
@@ -333,7 +324,12 @@ footer .brand {
   place-items: center;
   border: 1px solid rgba(255,255,255,.22);
   border-radius: 50%;
-  color: rgba(255,255,255,.78)
+  color: rgba(255,255,255,.78);
+  transition: color .25s,border-color .25s
+}
+.social-icon:hover,.social-icon:focus-visible {
+  border-color: #91a8b2;
+  color: #91a8b2
 }
 .social-icon svg {
   width: 17px;
@@ -343,7 +339,19 @@ footer small {
   justify-self: end;
   font-size: .64rem;
   letter-spacing: .08em;
+  line-height: 1.7;
+  text-align: right;
   white-space: nowrap
+}
+.footer-rights {
+  display: block
+}
+.footer-credit {
+  color: #fff;
+  transition: color .25s
+}
+.footer-credit:hover,.footer-credit:focus-visible {
+  color: #91a8b2
 }
 .note {
   padding: 24px 28px;
@@ -383,7 +391,6 @@ footer small {
   margin-bottom: 10px
 }
 .product-visual {
-  min-height: 500px;
   display: grid;
   place-items: center;
   background: linear-gradient(145deg,#d8e0e3,#91a8b2);
@@ -407,12 +414,6 @@ footer small {
   }
   .benefit-grid {
     grid-template-columns: repeat(3,1fr)
-  }
-  .hero {
-    grid-template-columns: 1fr 1fr
-  }
-  .product-visual {
-    min-height: 400px
   }
 }
 @media(max-width:760px) {
@@ -468,23 +469,9 @@ footer small {
   body:has(.main-nav.open) {
     overflow: hidden
   }
-  .hero {
-    height: auto;
-    max-height: none;
-    min-height: 760px;
-    grid-template-columns: 1fr;
-    padding: 135px 22px 65px
-  }
-  .hero-product {
-    grid-row: 1;
-    margin-top: 40px
-  }
   .hero-product__media {
     width: 125%;
     margin-left: -12%
-  }
-  .hero-copy {
-    grid-row: 2
   }
   .hero-title {
     font-size: 3.1rem
@@ -516,11 +503,15 @@ footer small {
     padding: 75px 22px
   }
   footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
     gap: 18px;
     min-height: 88px;
-    padding: 18px 22px
+    padding: 28px 22px;
+    text-align: center
   }
   footer .brand {
+    justify-self: center;
     font-size: 1.3rem
   }
   .social-icons {
@@ -532,7 +523,10 @@ footer small {
   }
   footer small {
     font-size: .56rem;
-    letter-spacing: .04em
+    letter-spacing: .04em;
+    justify-self: center;
+    white-space: normal;
+    text-align: center
   }
   .fact-grid {
     grid-template-columns: 1fr
@@ -544,15 +538,8 @@ footer small {
     grid-template-columns: 1fr;
     margin-bottom: 90px
   }
-  .product-card.reverse .product-visual {
-    order: 0
-  }
   .product-visual {
-    min-height: 330px;
     border-radius: 55px 0
-  }
-  .product-visual.cream .product-visual__media {
-    height: 320px
   }
 }
 @media(max-width:420px) {
@@ -561,12 +548,6 @@ footer small {
   }
   .benefit-item:last-child {
     grid-column: auto
-  }
-  .hero-product {
-    margin-top: 80px
-  }
-  .product-visual {
-    min-height: 280px
   }
 }
 @media(prefers-reduced-motion:no-preference) {

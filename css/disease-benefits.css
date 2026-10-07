@@ -18,11 +18,14 @@
   max-width: 900px
 }
 .disease-card__title {
+  grid-column: 2;
+  margin: 0 0 5px;
   color: var(--deep);
   letter-spacing: .1em;
   text-transform: uppercase
 }
 .disease-card__copy {
+  grid-column: 2;
   margin: 0;
   font-size: .86rem
 }
@@ -49,16 +52,8 @@
 .disease-media {
   margin-top: 32px
 }
-.disease-media.single .treatment-media__image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain
-}
 .treatment-media {
-  margin-left: 0
-}
-.treatment-media {
+  order: -1;
   width: 100%;
   max-width: none;
   margin: 0
@@ -69,9 +64,6 @@
   max-height: 480px;
   object-fit: contain;
   border-radius: 0 70px 0 70px
-}
-.treatment-media {
-  order: -1
 }
 @media(max-width:760px) {
   .treatment-block {
@@ -114,13 +106,6 @@
   font-size: 2.7rem;
   color: #8399a1
 }
-.disease-card__title {
-  grid-column: 2;
-  margin: 0 0 5px
-}
-.disease-card__copy {
-  grid-column: 2
-}
 .stage-list {
   position: relative;
   display: grid;
@@ -135,8 +120,6 @@
   position: relative;
   min-height: 150px;
   padding: 65px 28px 28px;
-  background: transparent;
-  border: 0;
   counter-increment: stage
 }
 .stage-list li:before {
@@ -144,13 +127,8 @@
   position: absolute;
   top: -8px;
   left: 24px;
-  width: auto;
-  height: auto;
   display: grid;
   place-items: center;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
   font-family: Prata,serif;
   font-size: 2.5rem;
   color: #718990
@@ -168,14 +146,11 @@
   }
   .stage-list li {
     min-height: auto;
-    padding: 68px 0 28px;
-    border: 0
+    padding: 68px 0 28px
   }
   .stage-list li:before {
     top: 4px;
     left: 0;
-    width: auto;
-    height: auto;
     font-size: 2.2rem
   }
 }
@@ -221,7 +196,8 @@
   max-height: 500px;
   object-fit: contain;
   border-radius: 0 70px;
-  background: transparent
+  background: transparent;
+  filter: drop-shadow(0 22px 24px rgba(25,71,91,.18))
 }
 .benefits-lead__copy {
   max-width: 650px
@@ -233,7 +209,6 @@
 }
 .benefit-principle {
   padding: 30px 35px;
-  border: 0;
   text-align: center
 }
 .benefit-principle__title {
@@ -283,7 +258,6 @@
     margin: 60px 0
   }
   .benefit-principle {
-    border-left: 0;
     border-top: 1px solid #cbd4d6;
     padding: 24px 0
   }
@@ -304,16 +278,8 @@
   display: grid;
   place-items: center;
   margin: 0 auto 22px;
-  border: 0;
   border-radius: 50%;
-  background: #eef2f3;
-  font-family: Georgia,serif;
-  font-size: 2rem;
-  line-height: 1;
-  color: #fff
-}
-.benefits-lead__media {
-  filter: drop-shadow(0 22px 24px rgba(25,71,91,.18))
+  background: #eef2f3
 }
 .active-grid {
   display: grid;
@@ -346,11 +312,6 @@
   filter: none
 }
 @media(max-width:760px) {
-  .products .product-visual {
-    width: 100%;
-    min-height: 0;
-    aspect-ratio: 1/1
-  }
   .product-visual__media {
     max-width: 100%;
     max-height: 100%;

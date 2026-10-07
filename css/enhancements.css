@@ -2,16 +2,15 @@
   aspect-ratio: 1/1;
   object-fit: cover
 }
-.hero-product__media,.product-visual__media,.pair-photo,.instruction-card__media,.pharmacy-card__media {
+.hero-product__media,.product-visual__media {
   object-fit: contain
 }
 img.product-image--cream {
   max-width: 100%;
   aspect-ratio: auto;
-  object-fit: contain;
   object-position: center
 }
-.product-visual,.story-image,.product-pair {
+.product-visual {
   width: 100%;
   height: auto;
   min-height: 0;
@@ -47,11 +46,6 @@ img.product-image--cream {
   padding: 34px 38px;
   background: #e7eeee
 }
-.leaflet-intro .eyebrow {
-  display: block;
-  margin-bottom: 12px;
-  color: var(--deep)
-}
 .leaflet-intro__copy {
   max-width: 680px;
   margin: 0;
@@ -81,16 +75,8 @@ img.product-image--cream {
 .leaflet-section {
   margin: 0 0 55px
 }
-.leaflet-title {
-  margin-top: 0
-}
 .leaflet-section ul {
   padding-left: 20px
-}
-.leaflet .note {
-  margin-top: 70px;
-  padding: 26px 30px;
-  border-left: 3px solid var(--deep)
 }
 @media(max-width:760px) {
   .leaflet-intro {
@@ -102,9 +88,6 @@ img.product-image--cream {
   }
   .leaflet-section {
     margin-bottom: 45px
-  }
-  .leaflet .note {
-    margin-top: 55px
   }
 }
 .leaflet-return {
@@ -204,9 +187,4 @@ img.product-image--cream {
 }
 .product-card.reverse .product-visual {
   order: 0
-}
-@media(max-width:760px) {
-  .product-card .product-visual,.product-card.reverse .product-visual {
-    order: 0
-  }
 }
